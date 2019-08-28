@@ -47,10 +47,12 @@ public class ListarAlunoServlet extends HttpServlet {
         AlunoBO bo = new AlunoBO();
         try {
             bo.listar();
-        } catch (NegocioException ex) {
-            Logger.getLogger(ListarAlunoServlet.class.getName()).log(Level.SEVERE, null, ex);
+            
             
             PrintWriter out = response.getWriter();
+            
+        } catch (NegocioException ex) {
+            Logger.getLogger(ListarAlunoServlet.class.getName()).log(Level.SEVERE, null, ex);
 
         }
 
